@@ -1,4 +1,5 @@
 import Vapor
+import Leaf
 
 // configures your application
 public func configure(_ app: Application) throws {
@@ -7,4 +8,9 @@ public func configure(_ app: Application) throws {
 
     // register routes
     try routes(app)
+    
+    app.leaf.configuration = LeafConfiguration(rootDirectory: "Resources")
+    app.views.use(.leaf)
+    
+    app.http.server.configuration.port = 8013
 }
