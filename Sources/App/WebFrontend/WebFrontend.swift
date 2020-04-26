@@ -12,11 +12,15 @@ class WebFrontend: RouteCollection {
     
     func boot(routes: RoutesBuilder) throws {
         routes.get { req  in
-            req.view.render("index")
+            return Post.query(on: req.db).all().flatMap { posts -> EventLoopFuture<View> in 
+                return req.view.render("index", ["posts": posts])
+            }
         }
         
-        routes.get("index") { req  in
-            req.view.render("index")
+        routes.get("index") { req -> EventLoopFuture<View> in
+            return Post.query(on: req.db).all().flatMap { posts -> EventLoopFuture<View> in
+                return req.view.render("index", ["posts": posts])
+            }
         }
         routes.get("about") { req in
             req.view.render("about")
