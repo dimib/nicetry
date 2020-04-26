@@ -20,12 +20,48 @@
         }
       },
       {
+        "package": "BSON",
+        "repositoryURL": "https://github.com/OpenKitten/BSON.git",
+        "state": {
+          "branch": null,
+          "revision": "fc14860d67834d778f9de096ea6ffe071d61c62d",
+          "version": "7.0.17"
+        }
+      },
+      {
         "package": "console-kit",
         "repositoryURL": "https://github.com/vapor/console-kit.git",
         "state": {
           "branch": null,
           "revision": "7a97a5ea7fefe61cf2c943242113125b0f396a98",
           "version": "4.1.0"
+        }
+      },
+      {
+        "package": "fluent",
+        "repositoryURL": "https://github.com/vapor/fluent.git",
+        "state": {
+          "branch": null,
+          "revision": "a5916ec4ffcc1482096e91f652911fc33ba9a7fb",
+          "version": "4.0.0-rc.2.1"
+        }
+      },
+      {
+        "package": "fluent-kit",
+        "repositoryURL": "https://github.com/vapor/fluent-kit.git",
+        "state": {
+          "branch": null,
+          "revision": "c92320b7f2d3b6f291db4c11c5ede27d69da555b",
+          "version": "1.0.0-rc.1.23"
+        }
+      },
+      {
+        "package": "fluent-mongo-driver",
+        "repositoryURL": "https://github.com/vapor/fluent-mongo-driver.git",
+        "state": {
+          "branch": null,
+          "revision": "09c2302791e2dbc2c3ea3287c6ab865a32b9908a",
+          "version": "1.0.0-rc.1.8"
         }
       },
       {
@@ -47,12 +83,39 @@
         }
       },
       {
+        "package": "MongoKitten",
+        "repositoryURL": "https://github.com/OpenKitten/MongoKitten.git",
+        "state": {
+          "branch": null,
+          "revision": "6858a970b1ad00cd3a901993a02490eecd430e96",
+          "version": "6.3.0"
+        }
+      },
+      {
+        "package": "DNSClient",
+        "repositoryURL": "https://github.com/openkitten/NioDNS.git",
+        "state": {
+          "branch": null,
+          "revision": "ea98c8f47c6bd3c54803f417111ddad48595f5d6",
+          "version": "2.0.5"
+        }
+      },
+      {
         "package": "routing-kit",
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
           "branch": null,
           "revision": "e7f2d5bd36dc65a9edb303541cb678515a7fece3",
           "version": "4.1.0"
+        }
+      },
+      {
+        "package": "sql-kit",
+        "repositoryURL": "https://github.com/vapor/sql-kit.git",
+        "state": {
+          "branch": null,
+          "revision": "1e0239616134dd45fa4894bfe83750d196e3a83d",
+          "version": "3.0.0"
         }
       },
       {

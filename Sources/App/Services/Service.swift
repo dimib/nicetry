@@ -8,14 +8,30 @@
 import Foundation
 import Vapor
 
+enum PostError: Error {
+    case emptyBody
+    case decodeFailure
+}
+
 class Services: RouteCollection {
     
+    let basicPath: String
+    
+    init(basicPath: String = "service") {
+        self.basicPath = basicPath
+    }
+    
     func boot(routes: RoutesBuilder) throws {
-        routes.get { req  in
-            req.view.render("index", [
-                "title":"Welcome to my page",
-                "content":"You will find a lot of stuff here. Just lean back and watch!"
-            ])
+        
+        routes.get("service", "posts") { req -> EventLoopFuture<[Post]> in
+            Post.query(on: req.db).all()
+        }
+        
+        routes.post("service", "posts") { req -> EventLoopFuture<Post> in
+            if let post = Post.decode(string: req.body.string) {
+                return post.create(on: req.db).map { post }
+            }
+            return req.eventLoop.makeFailedFuture(PostError.decodeFailure)
         }
     }
 }
